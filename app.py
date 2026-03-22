@@ -9,11 +9,11 @@ table_client = service.get_table_client(table_name)
 
 entity = {
     "PartitionKey": "Users",
-    "RowKey": "2",
-    "Name": "Cloud Architect",
-    "Age": 32
+    "RowKey": "3",
+    "Name": "Amol",
+    "Age": 33
 }
 
-table_client.create_entity(entity=entity)
+table_client.upsert_entity(entity=entity)
 
-print("Entity inserted successfully!")
+print("Entity upserted successfully!")
