@@ -17,6 +17,50 @@ Azure Table Storage is a **NoSQL key-value store** designed for **massive scalab
 * Metadata storage
 
 ---
+```
+// install and configure az cli 
+https://learn.microsoft.com/en-us/cli/azure/install-azure-cli-windows?view=azure-cli-latest
+
+az login 
+
+az group create --name table-rg --location eastus
+
+az group list 
+
+az storage account create --name mystoragetable98659080 --resource-group table-rg --location eastus --sku Standard_LRS --kind StorageV2
+
+az storage table create --name mytable --account-name mystoragetable98659080
+
+https://mystoragetable98659080.table.core.windows.net/mytable
+
+az storage entity insert --table-name mytable --entity PartitionKey=Users RowKey=1 Name=Atul Age=30 --account-name mystoragetable98659080
+
+az storage entity query --table-name mytable --account-name mystoragetable98659080
+
+// powershell >> run as admin 
+
+choco install python 
+choco install git 
+
+curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+python get-pip.py
+
+python --version 
+pip --version 
+
+git --version 
+git config --global user.name "Atul Kamble"
+git config --global user.email "atul_kamble@hotmail.com"
+git config --list 
+
+git clone https://github.com/atulkamble/azure-table-storage-project.git
+cd azure-table-storage-project
+
+// string update from Storage Accounts >> Aceess keys >> Copy Connection string and paste in app.py 
+
+pip install -r requrements.txt 
+python app.py 
+```
 
 # 🏗️ Architecture Diagram
 
