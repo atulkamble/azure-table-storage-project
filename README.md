@@ -63,7 +63,9 @@ pip install --upgrade pip
 // string update from Storage Accounts >> Aceess keys >> Copy Connection string and paste in app.py 
 
 pip install -r requrements.txt 
-python app.py 
+python app.py
+
+az group delete --name table-rg --yes 
 ```
 
 # 🏗️ Architecture Diagram
