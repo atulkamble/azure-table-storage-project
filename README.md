@@ -56,6 +56,10 @@ git config --list
 git clone https://github.com/atulkamble/azure-table-storage-project.git
 cd azure-table-storage-project
 
+python.exe -m pip install --upgrade pip
+OR
+pip install --upgrade pip
+
 // string update from Storage Accounts >> Aceess keys >> Copy Connection string and paste in app.py 
 
 pip install -r requrements.txt 
